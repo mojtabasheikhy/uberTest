@@ -12,7 +12,8 @@ struct uberApp: App {
     @StateObject var LocationViewModel = LocationSearchViewModel()
     var body: some Scene {
         WindowGroup {
-            HomeView().environmentObject(LocationViewModel)
+            //HomeView().environmentObject(LocationViewModel)
+            LoginView()
         }
     }
 }
