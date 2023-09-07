@@ -56,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0F07C5AB2AA336FB00BF88FC /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = SOURCE_ROOT; };
-		0F07C5AE2AA35B3600BF88FC /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		0F07C5AE2AA35B3600BF88FC /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripsView.swift; path = ../../../../Views/TripsView.swift; sourceTree = "<group>"; };
 		0FC5C5832AA5B3E100C68BD9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = SOURCE_ROOT; };
 		0FC5C5892AA5C79700C68BD9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0FC5C58B2AA5C7A400C68BD9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -114,14 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F07C5AD2AA35B2100BF88FC /* Trips */ = {
-			isa = PBXGroup;
-			children = (
-				0F07C5AE2AA35B3600BF88FC /* TripsView.swift */,
-			);
-			name = Trips;
-			sourceTree = "<group>";
-		};
 		0FC5C5852AA5C3FF00C68BD9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +187,7 @@
 		0FC5C5932AA5EE4200C68BD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0F07C5AE2AA35B3600BF88FC /* TripsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,25 +293,8 @@
 				0FC5C58F2AA5EDEF00C68BD9 /* Home */,
 				0FC5C58D2AA5EDCA00C68BD9 /* Trips */,
 				0FC5C5852AA5C3FF00C68BD9 /* Authentication */,
-				EDB469AE2A8F957F00C91A1D /* view */,
-				EDB469AD2A8F954500C91A1D /* viewModel */,
 			);
 			path = core;
-			sourceTree = "<group>";
-		};
-		EDB469AD2A8F954500C91A1D /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
-			sourceTree = "<group>";
-		};
-		EDB469AE2A8F957F00C91A1D /* view */ = {
-			isa = PBXGroup;
-			children = (
-				0F07C5AD2AA35B2100BF88FC /* Trips */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		EDB469B12A8F95AF00C91A1D /* app */ = {
