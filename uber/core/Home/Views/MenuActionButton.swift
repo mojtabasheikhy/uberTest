@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuActionButton: View {
     @EnvironmentObject var locationSearchViewModel : LocationSearchViewModel
     @Binding var isShowSearchView :MapViewState
+    @Binding var isShowSideMenu  : Bool
     var body: some View {
        Button{
            withAnimation(.spring()){
@@ -28,7 +29,7 @@ struct MenuActionButton: View {
     func actionForState(_ state:MapViewState){
         switch state{
         case .noInput :
-            print("searching For Location")
+            isShowSideMenu.toggle()
             
         case .searchingForLocation:
             isShowSearchView = .noInput
@@ -58,6 +59,6 @@ struct MenuActionButton: View {
 
 struct MenuActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        MenuActionButton(isShowSearchView: .constant(MapViewState.searchingForLocation) )
+        MenuActionButton(isShowSearchView: .constant(MapViewState.searchingForLocation),isShowSideMenu: .constant(false) )
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
+    @EnvironmentObject var authViewModel : AuthViewModel
     var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack{
@@ -68,7 +69,10 @@ struct LoginView: View {
                         Spacer()
                       
                         
-                        Button{}label: {
+                        Button{
+                            authViewModel.singIn(wihtEmail: email, password: password)
+                            
+                        }label: {
                             HStack{
                                 Text("sing In").foregroundColor(.black)
                                 Image(systemName:"arrow.right").foregroundColor(.black)

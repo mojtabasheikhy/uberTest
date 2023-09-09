@@ -12,6 +12,7 @@ struct RegisterView: View {
     @State var email = ""
     @State var password = ""
     @Environment (\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel :AuthViewModel
     var body: some View {
        
         ZStack{
@@ -33,9 +34,11 @@ struct RegisterView: View {
                     .padding(.horizontal , -30)
                 CustomInputFiled(text: $name, Hint: "Enter Your Name", Title: "first Name").padding(.top , 30)
                 CustomInputFiled(text: $email, Hint: "Enter Your Email", Title: "Email Address")
-                CustomInputFiled(text: $password, Hint: "Enter Your Password", Title: "Password")
+                CustomInputFiled(text: $password, Hint: "Enter Your Password", Title: "Password",isSecureField: true)
                 Spacer()
-                Button{}label: {
+                Button{
+                    viewModel.register(withEmail: email, password: password,fullname: name)
+                }label: {
                     Text("register")
                         .font(.system(size: 18 , weight: .bold))
                         .padding(10)
