@@ -40,6 +40,9 @@
 		EDD14CE72AABEEDB005FF42F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CE62AABEEDB005FF42F /* SideMenuView.swift */; };
 		EDD14CEA2AABF9DE005FF42F /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CE92AABF9DE005FF42F /* SideMenuOptionViewModel.swift */; };
 		EDD14CEF2AABFBED005FF42F /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CEE2AABFBED005FF42F /* SideMenuOptionView.swift */; };
+		EDD14CF62AAC2693005FF42F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CF52AAC2693005FF42F /* SettingsView.swift */; };
+		EDD14CF92AAC2FC2005FF42F /* SavedLocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */; };
+		EDD14CFB2AAC36C4005FF42F /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		EDD14CE62AABEEDB005FF42F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		EDD14CE92AABF9DE005FF42F /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
 		EDD14CEE2AABFBED005FF42F /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		EDD14CF52AAC2693005FF42F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationRowView.swift; sourceTree = "<group>"; };
+		EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC5C5982AA5EEC300C68BD9 /* CustomInputField.swift */,
+				EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */,
+				EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */,
 			);
 			path = flexiableItem;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 		EDB469AC2A8F953800C91A1D /* core */ = {
 			isa = PBXGroup;
 			children = (
+				EDD14CF02AAC1BC7005FF42F /* Settings */,
 				EDD14CE42AABEEB9005FF42F /* SideMenu */,
 				0FC5C5902AA5EDF600C68BD9 /* LocationSearch */,
 				0FC5C58F2AA5EDEF00C68BD9 /* Home */,
@@ -367,6 +376,30 @@
 			isa = PBXGroup;
 			children = (
 				EDD14CE92AABF9DE005FF42F /* SideMenuOptionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDD14CF02AAC1BC7005FF42F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EDD14CF22AAC1BDF005FF42F /* ViewModel */,
+				EDD14CF12AAC1BD7005FF42F /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EDD14CF12AAC1BD7005FF42F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDD14CF52AAC2693005FF42F /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDD14CF22AAC1BDF005FF42F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -512,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED692AE12A99824D0081A5FE /* LocationSearchViewModel.swift in Sources */,
+				EDD14CF92AAC2FC2005FF42F /* SavedLocationRowView.swift in Sources */,
 				ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */,
 				EDB469B92A8FB3B100C91A1D /* LocationManager.swift in Sources */,
 				EDD14CEA2AABF9DE005FF42F /* SideMenuOptionViewModel.swift in Sources */,
@@ -520,6 +554,7 @@
 				EDB469812A8F951000C91A1D /* uberApp.swift in Sources */,
 				ED8D39332AA96EA200693A35 /* AuthViewModel.swift in Sources */,
 				EDB469B62A8F965000C91A1D /* UberMapViewRepresantable.swift in Sources */,
+				EDD14CF62AAC2693005FF42F /* SettingsView.swift in Sources */,
 				ED8F4B5C2AA9995F000ED49E /* User.swift in Sources */,
 				ED692ADB2A994D740081A5FE /* MenuActionButton.swift in Sources */,
 				0FC5C58C2AA5C7A400C68BD9 /* RegisterView.swift in Sources */,
@@ -527,6 +562,7 @@
 				EDD14CEF2AABFBED005FF42F /* SideMenuOptionView.swift in Sources */,
 				0FC5C5842AA5B3E100C68BD9 /* Color.swift in Sources */,
 				ED692ADF2A9958C80081A5FE /* LocationSearchResultCellView.swift in Sources */,
+				EDD14CFB2AAC36C4005FF42F /* SettingRowView.swift in Sources */,
 				0FDFA7C22AA4A72E003EB10C /* PriceFormat.swift in Sources */,
 				EDD14CE72AABEEDB005FF42F /* SideMenuView.swift in Sources */,
 				0FDFA7C42AA4AE7B003EB10C /* UberLocation.swift in Sources */,
