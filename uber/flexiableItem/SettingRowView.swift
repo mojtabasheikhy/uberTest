@@ -22,10 +22,7 @@ struct SettingRowView: View {
             Text(title).font(.system(size : 15))
             
             Spacer()
-            Image(systemName: "chevron.right")
-                .imageScale(.small)
-                .font(.title3)
-                .foregroundColor(.gray)
+           
         }.padding(2)
     }
 }

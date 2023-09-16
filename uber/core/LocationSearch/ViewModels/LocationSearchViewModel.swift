@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import Firebase
 
 class LocationSearchViewModel : NSObject , ObservableObject{
     
@@ -27,8 +28,7 @@ class LocationSearchViewModel : NSObject , ObservableObject{
         searchCompelete.delegate = self
         searchCompelete.queryFragment = querySearch
     }
-    func SelectionLocation(_ location :MKLocalSearchCompletion) {
-        
+    func SelectionLocation(_ location :MKLocalSearchCompletion,config : locationResultViewConfig) {
         locationSearch(forlocalSearchCompletion: location) { response, error in
             if error != nil{
                 print("Map ERROR IS  \(error!)")
@@ -36,8 +36,22 @@ class LocationSearchViewModel : NSObject , ObservableObject{
             }
             guard let  item = response?.mapItems.first else {return}
             let coordinate = item.placemark.coordinate
-            print("sd \(coordinate)")
-            self.selectedUberLocation  = UberLocation (title: location.title , coordiante: coordinate) 
+            switch config{
+            case .ride:
+                self.selectedUberLocation  = UberLocation (title: location.title , coordiante: coordinate)
+            case .saveLocation(let viewModel):
+                guard let userID = Auth.auth().currentUser?.uid else {return}
+                let savedLocation =
+                SavedLocation(title: location.title, address: location.subtitle,
+                              coordinator: GeoPoint(latitude: coordinate.latitude, longitude: coordinate.longitude))
+              
+                guard let encodedLocation = try? Firestore.Encoder().encode(savedLocation) else { return }
+             
+                
+                Firestore.firestore().collection(AppConstant.UserCollection).document(userID).updateData(
+                    [viewModel.dataBasekey : encodedLocation])
+            }
+            
         }
     }
     func locationSearch(forlocalSearchCompletion locationSearch : MKLocalSearchCompletion ,completion2 :@escaping MKLocalSearch.CompletionHandler){

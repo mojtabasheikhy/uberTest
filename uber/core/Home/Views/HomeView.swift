@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var showSideMenu  = false
     @EnvironmentObject var locationViewModel :LocationSearchViewModel
     @EnvironmentObject var authViewModel : AuthViewModel
+    @EnvironmentObject var homeViewModel : HomeViewModel
     var body: some View {
         Group{
             if authViewModel.userSession == nil {
@@ -47,8 +48,9 @@ extension HomeView {
                     .ignoresSafeArea()
                 
                 if mapViewState == .searchingForLocation {
-                    LocationSearchView(ShowLocationSearchView: $mapViewState)
+                    LocationSearchView()
                 }else if mapViewState == .noInput {
+                  
                     LocationSearchActivationView().padding(.top , 72)
                         .onTapGesture {
                             withAnimation(.spring()){
@@ -69,6 +71,11 @@ extension HomeView {
             if locationManager != nil{
                 locationViewModel.userLocation = locationManager
             }
+        }.onReceive(locationViewModel.$selectedUberLocation){uberLocation in
+            if uberLocation != nil{
+                mapViewState = .locationSelected
+            }
+        
         }
     }
 }

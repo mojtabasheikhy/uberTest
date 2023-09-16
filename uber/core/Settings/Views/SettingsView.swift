@@ -9,6 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     let user :User
+    @EnvironmentObject var viewModel : AuthViewModel
+    init(user: User) {
+        self.user = user
+    }
     var body: some View {
         VStack{
             List{
@@ -30,8 +34,14 @@ struct SettingsView: View {
                     }
                 }
                 Section("Favorites"){
-                    SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subTitle: "add Home")
-                    SavedLocationRowView(imageName: "archivebox.circle.fill", title: "work", subTitle: "add work")
+                    ForEach(SavedLocationViewModel.allCases  ){viewModel2 in
+                        NavigationLink{
+                          SavedLocationSearchView(  config: viewModel2)
+                        }label: {
+                            SavedLocationRowView(savedLocationViewModel: viewModel2 ,user: user)
+                        }
+                   
+                    }
                 }
                 Section("Settings"){
                     SettingRowView(title:"Notifications", imageName: "bell.circle.fill", tintColor: Color.purple)
@@ -39,15 +49,20 @@ struct SettingsView: View {
                 }
                 Section("Account"){
                     SettingRowView(title:"make Money Driving", imageName: "dollarsign.circle.fill", tintColor: Color.green)
-                    SettingRowView(title:"sing out", imageName: "arrow.left.circle.fill", tintColor: Color.red)
+                    SettingRowView(title:"sing out", imageName: "arrow.left.circle.fill", tintColor: Color.red).onTapGesture {
+                        viewModel.singOut()
+                    }
                 }
             }
-        }
+        }.navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.large)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(user: User(fullName: "FirstName", email: "m.s.fardad@gmail.com", uid: "uid"))
+        NavigationStack{
+            SettingsView(user: dev.mockUser)
+        }
     }
 }
