@@ -25,6 +25,8 @@
 		ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */; };
 		ED692ADF2A9958C80081A5FE /* LocationSearchResultCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADE2A9958C80081A5FE /* LocationSearchResultCellView.swift */; };
 		ED692AE12A99824D0081A5FE /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692AE02A99824D0081A5FE /* LocationSearchViewModel.swift */; };
+		ED69E94C2AB3F79F003A2383 /* SavedLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69E94B2AB3F79F003A2383 /* SavedLocationViewModel.swift */; };
+		ED69E94E2AB4020F003A2383 /* SavedLocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69E94D2AB4020F003A2383 /* SavedLocationSearchView.swift */; };
 		ED8D39312AA96E4000693A35 /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D39302AA96E4000693A35 /* TripsView.swift */; };
 		ED8D39332AA96EA200693A35 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D39322AA96EA200693A35 /* AuthViewModel.swift */; };
 		ED8F4B5C2AA9995F000ED49E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F4B5B2AA9995F000ED49E /* User.swift */; };
@@ -43,6 +45,11 @@
 		EDD14CF62AAC2693005FF42F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CF52AAC2693005FF42F /* SettingsView.swift */; };
 		EDD14CF92AAC2FC2005FF42F /* SavedLocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */; };
 		EDD14CFB2AAC36C4005FF42F /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */; };
+		EDE415312AB4F0FB00637226 /* LocationSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE415302AB4F0FB00637226 /* LocationSearchResultView.swift */; };
+		EDE415332AB4F45000637226 /* SavedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE415322AB4F45000637226 /* SavedLocation.swift */; };
+		EDE415352AB4F77500637226 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE415342AB4F77500637226 /* AppConstant.swift */; };
+		EDE415372AB53F5900637226 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE415362AB53F5900637226 /* DeveloperPreview.swift */; };
+		EDE415392AB55D9600637226 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE415382AB55D9600637226 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,8 @@
 		ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		ED692ADE2A9958C80081A5FE /* LocationSearchResultCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCellView.swift; sourceTree = "<group>"; };
 		ED692AE02A99824D0081A5FE /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		ED69E94B2AB3F79F003A2383 /* SavedLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationViewModel.swift; sourceTree = "<group>"; };
+		ED69E94D2AB4020F003A2383 /* SavedLocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationSearchView.swift; sourceTree = "<group>"; };
 		ED8D39302AA96E4000693A35 /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripsView.swift; path = Views/TripsView.swift; sourceTree = SOURCE_ROOT; };
 		ED8D39322AA96EA200693A35 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = Views/AuthViewModel.swift; sourceTree = SOURCE_ROOT; };
 		ED8F4B5B2AA9995F000ED49E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Views/User.swift; sourceTree = SOURCE_ROOT; };
@@ -99,6 +108,11 @@
 		EDD14CF52AAC2693005FF42F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationRowView.swift; sourceTree = "<group>"; };
 		EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
+		EDE415302AB4F0FB00637226 /* LocationSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultView.swift; sourceTree = "<group>"; };
+		EDE415322AB4F45000637226 /* SavedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedLocation.swift; path = uber/flexiableItem/SavedLocation.swift; sourceTree = SOURCE_ROOT; };
+		EDE415342AB4F77500637226 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		EDE415362AB53F5900637226 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeveloperPreview.swift; path = uber/flexiableItem/DeveloperPreview.swift; sourceTree = SOURCE_ROOT; };
+		EDE415382AB55D9600637226 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = uber/flexiableItem/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				EDB469B52A8F965000C91A1D /* UberMapViewRepresantable.swift */,
-				ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */,
 				ED692ADA2A994D740081A5FE /* MenuActionButton.swift */,
 				EDB469AF2A8F959000C91A1D /* HomeView.swift */,
 			);
@@ -197,6 +210,7 @@
 		0FC5C5922AA5EE2E00C68BD9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EDE415382AB55D9600637226 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -219,8 +233,10 @@
 		0FC5C5952AA5EE5A00C68BD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */,
 				ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */,
 				ED692ADE2A9958C80081A5FE /* LocationSearchResultCellView.swift */,
+				ED69E94D2AB4020F003A2383 /* SavedLocationSearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +255,8 @@
 				0FC5C5982AA5EEC300C68BD9 /* CustomInputField.swift */,
 				EDD14CF82AAC2FC2005FF42F /* SavedLocationRowView.swift */,
 				EDD14CFA2AAC36C4005FF42F /* SettingRowView.swift */,
+				EDE415302AB4F0FB00637226 /* LocationSearchResultView.swift */,
+				EDE415342AB4F77500637226 /* AppConstant.swift */,
 			);
 			path = flexiableItem;
 			sourceTree = "<group>";
@@ -333,6 +351,7 @@
 				0FDFA7BF2AA47893003EB10C /* RideType.swift */,
 				0FDFA7C32AA4AE7B003EB10C /* UberLocation.swift */,
 				ED8F4B5B2AA9995F000ED49E /* User.swift */,
+				EDE415322AB4F45000637226 /* SavedLocation.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -342,6 +361,7 @@
 			children = (
 				0FDFA7C12AA4A72E003EB10C /* PriceFormat.swift */,
 				0FC5C5832AA5B3E100C68BD9 /* Color.swift */,
+				EDE415362AB53F5900637226 /* DeveloperPreview.swift */,
 			);
 			path = extention;
 			sourceTree = "<group>";
@@ -400,6 +420,7 @@
 		EDD14CF22AAC1BDF005FF42F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ED69E94B2AB3F79F003A2383 /* SavedLocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,18 +566,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED692AE12A99824D0081A5FE /* LocationSearchViewModel.swift in Sources */,
+				EDE415392AB55D9600637226 /* HomeViewModel.swift in Sources */,
 				EDD14CF92AAC2FC2005FF42F /* SavedLocationRowView.swift in Sources */,
 				ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */,
+				ED69E94E2AB4020F003A2383 /* SavedLocationSearchView.swift in Sources */,
 				EDB469B92A8FB3B100C91A1D /* LocationManager.swift in Sources */,
 				EDD14CEA2AABF9DE005FF42F /* SideMenuOptionViewModel.swift in Sources */,
 				0F07C5AC2AA336FB00BF88FC /* MapViewState.swift in Sources */,
+				EDE415312AB4F0FB00637226 /* LocationSearchResultView.swift in Sources */,
 				EDB469B02A8F959000C91A1D /* HomeView.swift in Sources */,
 				EDB469812A8F951000C91A1D /* uberApp.swift in Sources */,
 				ED8D39332AA96EA200693A35 /* AuthViewModel.swift in Sources */,
+				ED69E94C2AB3F79F003A2383 /* SavedLocationViewModel.swift in Sources */,
 				EDB469B62A8F965000C91A1D /* UberMapViewRepresantable.swift in Sources */,
 				EDD14CF62AAC2693005FF42F /* SettingsView.swift in Sources */,
 				ED8F4B5C2AA9995F000ED49E /* User.swift in Sources */,
 				ED692ADB2A994D740081A5FE /* MenuActionButton.swift in Sources */,
+				EDE415332AB4F45000637226 /* SavedLocation.swift in Sources */,
 				0FC5C58C2AA5C7A400C68BD9 /* RegisterView.swift in Sources */,
 				ED8D39312AA96E4000693A35 /* TripsView.swift in Sources */,
 				EDD14CEF2AABFBED005FF42F /* SideMenuOptionView.swift in Sources */,
@@ -565,11 +591,13 @@
 				EDD14CFB2AAC36C4005FF42F /* SettingRowView.swift in Sources */,
 				0FDFA7C22AA4A72E003EB10C /* PriceFormat.swift in Sources */,
 				EDD14CE72AABEEDB005FF42F /* SideMenuView.swift in Sources */,
+				EDE415372AB53F5900637226 /* DeveloperPreview.swift in Sources */,
 				0FDFA7C42AA4AE7B003EB10C /* UberLocation.swift in Sources */,
 				0FC5C5992AA5EEC300C68BD9 /* CustomInputField.swift in Sources */,
 				ED692AD92A994A8C0081A5FE /* LocationSearchActivationView.swift in Sources */,
 				0FC5C58A2AA5C79700C68BD9 /* LoginView.swift in Sources */,
 				0FDFA7C02AA47893003EB10C /* RideType.swift in Sources */,
+				EDE415352AB4F77500637226 /* AppConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

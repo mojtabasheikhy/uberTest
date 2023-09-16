@@ -20,11 +20,13 @@ struct uberApp: App {
 
     @StateObject var LocationViewModel = LocationSearchViewModel()
     @StateObject var authViewModel     = AuthViewModel()
+    @StateObject var homeViewModel     = HomeViewModel()
     var body: some Scene {
         WindowGroup {
             HomeView()
                 .environmentObject(LocationViewModel)
                 .environmentObject(authViewModel)
+                .environmentObject(homeViewModel)
            // LoginView()
         }
     }

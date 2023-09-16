@@ -37,7 +37,11 @@ struct RegisterView: View {
                 CustomInputFiled(text: $password, Hint: "Enter Your Password", Title: "Password",isSecureField: true)
                 Spacer()
                 Button{
-                    viewModel.register(withEmail: email, password: password,fullname: name)
+                    viewModel.register(
+                        withEmail: email,
+                        password: password
+                        ,fullname: name,
+                       accountType: AccountType.driver)
                 }label: {
                     Text("register")
                         .font(.system(size: 18 , weight: .bold))
