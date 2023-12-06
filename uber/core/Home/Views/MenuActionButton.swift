@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuActionButton: View {
-    @EnvironmentObject var locationSearchViewModel : LocationSearchViewModel
+    @EnvironmentObject var locationSearchViewModel : HomeViewModel
     @Binding var isShowSearchView :MapViewState
     @Binding var isShowSideMenu  : Bool
     var body: some View {

@@ -12,7 +12,7 @@ struct HomeView: View {
    
     @State private var mapViewState  = MapViewState.noInput
     @State private var showSideMenu  = false
-    @EnvironmentObject var locationViewModel :LocationSearchViewModel
+    //@EnvironmentObject var locationViewModel :LocationSearchViewModel
     @EnvironmentObject var authViewModel : AuthViewModel
     @EnvironmentObject var homeViewModel : HomeViewModel
     var body: some View {
@@ -66,12 +66,16 @@ extension HomeView {
             if mapViewState == .locationSelected  || mapViewState == .PolyLineAdded {
                 TripsView().transition(.move(edge: .bottom))
             }
+            if let trip = homeViewModel.trips{
+                 AcceptTripsView(trip: trip)
+                    .transition(.move(edge: .bottom))
+            }
         }
         .onReceive(LocationManager.shared.$userLocation) { locationManager in
             if locationManager != nil{
-                locationViewModel.userLocation = locationManager
+                homeViewModel.userLocation = locationManager
             }
-        }.onReceive(locationViewModel.$selectedUberLocation){uberLocation in
+        }.onReceive(homeViewModel.$selectedUberLocation){uberLocation in
             if uberLocation != nil{
                 mapViewState = .locationSelected
             }

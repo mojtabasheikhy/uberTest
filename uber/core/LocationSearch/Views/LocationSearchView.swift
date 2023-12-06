@@ -10,7 +10,7 @@ import SwiftUI
 struct LocationSearchView: View {
     @State private  var  startLocation = ""
  
-    @EnvironmentObject private var viewModel :LocationSearchViewModel
+    @EnvironmentObject private var viewModel :HomeViewModel
     var body: some View {
         VStack{
             //header View

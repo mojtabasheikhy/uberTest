@@ -1,0 +1,29 @@
+//
+//  Trips.swift
+//  uber
+//
+//  Created by developer09 on 12/5/23.
+//
+
+import Foundation
+import Firebase
+
+struct Trips  : Identifiable , Codable {
+    let id :String
+    let passengerUid :String
+    let driverUid :String
+    let passnegerName :String
+    let driverName : String
+    let passengerLocation : GeoPoint
+    let driverLocation : GeoPoint
+    let pickUpLocationName : String
+    let dropoffLocationName :String
+    let pickUpLocation : GeoPoint
+    let dropOffLocation : GeoPoint
+    let pickUpLocationAddress : String
+    let tripsCost : Double
+    
+    var distanceToPassenger : Double = 0.0
+    var travelTimeToPassenger : Int = 0
+    
+}

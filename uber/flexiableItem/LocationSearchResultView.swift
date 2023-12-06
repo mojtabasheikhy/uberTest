@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationSearchResultView: View {
-    @StateObject var viewModel :LocationSearchViewModel
+    @StateObject var viewModel :HomeViewModel
     @State var config : locationResultViewConfig
     var body: some View {
         ScrollView{

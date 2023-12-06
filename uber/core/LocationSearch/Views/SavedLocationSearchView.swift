@@ -12,7 +12,7 @@ enum locationResultViewConfig{
 }
 struct SavedLocationSearchView: View {
     @State var SearchText = ""
-    @StateObject var viewModel  = LocationSearchViewModel()
+    @StateObject var viewModel  = HomeViewModel()
     let config : SavedLocationViewModel
     var body: some View {
         VStack{

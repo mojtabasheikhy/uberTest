@@ -8,10 +8,13 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import Combine
 
 class AuthViewModel : ObservableObject{
     @Published var userSession : FirebaseAuth.User?
     @Published var currentUser : User?
+    private let services  = userServices.shared
+    private var cancelable = Set< AnyCancellable>()
     init(){
         userSession = Auth.auth().currentUser
         fetchUser()
@@ -23,6 +26,7 @@ class AuthViewModel : ObservableObject{
                 print("\(error)")
                 return
             }else {
+                //self.currentUser  = authDataResult.
                 self.userSession = authDataResult?.user
             }
         }
@@ -58,14 +62,17 @@ class AuthViewModel : ObservableObject{
     }
     
     func fetchUser(){
-        guard let userId = self.userSession?.uid else { return }
-        Firestore.firestore().collection(AppConstant.UserCollection).document(userId).getDocument { snapShot, error in
-            if error != nil {
-                return
-            }
-            guard let dataUser = snapShot else {return}
-            guard let user = try? dataUser.data(as: User.self) else { return}
-            self.currentUser = user
-        }
+        services.$user.sink(receiveValue: { user in
+            self.currentUser = user}
+        ).store(in: &cancelable)
+      //  guard let userId = self.userSession?.uid else { return }
+     //   Firestore.firestore().collection(AppConstant.UserCollection).document(userId).getDocument { snapShot, error in
+      //      if error != nil {
+      //          return
+      //      }
+       //     guard let dataUser = snapShot else {return}
+      //      guard let user = try? dataUser.data(as: User.self) else { return}
+            
+       // }
     }
 }

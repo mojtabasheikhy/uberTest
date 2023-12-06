@@ -24,7 +24,7 @@ struct uberApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
-                .environmentObject(LocationViewModel)
+               // .environmentObject(LocationViewModel)
                 .environmentObject(authViewModel)
                 .environmentObject(homeViewModel)
            // LoginView()

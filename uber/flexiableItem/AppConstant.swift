@@ -13,6 +13,7 @@ struct AppConstant {
     static let UserWorkLocation = "workLocation"
     static let Driver = 1
     static let accountType = "accountType"
+    static let tripsCollection = "Trips"
 
 
 }

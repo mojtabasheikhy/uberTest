@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TripsView: View {
     @State var selectedRideType : RideType = .uber
-    @EnvironmentObject var locationSearchViewModel : LocationSearchViewModel
+    @EnvironmentObject var homeView : HomeViewModel
+   
     var body: some View {
             VStack{
                 Capsule()
@@ -33,13 +34,13 @@ struct TripsView: View {
                         HStack{
                             Text("").font(.system(size: 16,weight: .semibold)).foregroundColor(Color.gray)
                             Spacer()
-                            Text(locationSearchViewModel.pickUpTime ?? "").font(.system(size: 14)).foregroundColor(Color.gray)
+                            Text(homeView.pickUpTime ?? "").font(.system(size: 14)).foregroundColor(Color.gray)
                         }.padding(.bottom , 10)
 
                         HStack{
-                            Text(locationSearchViewModel.selectedUberLocation?.title ?? "").font(.system(size: 16,weight: .bold))
+                            Text(homeView.selectedUberLocation?.title ?? "").font(.system(size: 16,weight: .bold))
                             Spacer()
-                            Text(locationSearchViewModel.dropOffTime ?? "").font(.system(size: 14)).foregroundColor(Color.gray)
+                            Text(homeView.dropOffTime ?? "").font(.system(size: 14)).foregroundColor(Color.gray)
                         }
 
 
@@ -64,7 +65,7 @@ struct TripsView: View {
                                     .font(.system(size: 16 , weight: .bold))
                                     .frame(maxWidth: .infinity , alignment: .center)
                                     .foregroundColor(rideType == selectedRideType ? .white : Color.uiColor(.TextPrimary))
-                                Text(locationSearchViewModel.computePrice(type: rideType).toCurrency())
+                                Text(homeView.computePrice(type: rideType).toCurrency())
                                     .font(.system(size: 13)).foregroundColor(rideType == selectedRideType ? .white : Color.uiColor(.TextPrimary))
                                     .frame(maxWidth: .infinity , alignment: .center).padding(.bottom , 15).padding(.top , 2)
                             }
@@ -102,7 +103,9 @@ struct TripsView: View {
                 .background(Color(.systemGroupedBackground)).cornerRadius(10)
                 .padding(.horizontal )
 
-                Button{}label: {
+                Button{
+                    homeView.requestTrip()
+                }label: {
                     Text("Confirm Request")
                         .padding()
                         .frame(width: UIScreen.main.bounds.width-32 , height: 52)

@@ -20,6 +20,13 @@
 		0FDFA7C02AA47893003EB10C /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFA7BF2AA47893003EB10C /* RideType.swift */; };
 		0FDFA7C22AA4A72E003EB10C /* PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFA7C12AA4A72E003EB10C /* PriceFormat.swift */; };
 		0FDFA7C42AA4AE7B003EB10C /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFA7C32AA4AE7B003EB10C /* UberLocation.swift */; };
+		7886D3932B1EFA75005D7911 /* AcceptTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D3922B1EFA74005D7911 /* AcceptTripsView.swift */; };
+		7886D3952B1F2933005D7911 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D3942B1F2933005D7911 /* Trips.swift */; };
+		789CEFE22B208C4A00F98831 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CEFE12B208C4A00F98831 /* GeoPoint.swift */; };
+		78A94BE72B1DEEE700F2C956 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A94BE62B1DEEE700F2C956 /* UIImage.swift */; };
+		78A94BE92B1DF17A00F2C956 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A94BE82B1DF17A00F2C956 /* DriverAnnotation.swift */; };
+		78A94BEB2B1DF4C700F2C956 /* cartop.svg in Resources */ = {isa = PBXBuildFile; fileRef = 78A94BEA2B1DF4C700F2C956 /* cartop.svg */; };
+		78A94BEE2B1DFED400F2C956 /* userServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A94BED2B1DFED400F2C956 /* userServices.swift */; };
 		ED692AD92A994A8C0081A5FE /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */; };
 		ED692ADB2A994D740081A5FE /* MenuActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADA2A994D740081A5FE /* MenuActionButton.swift */; };
 		ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */; };
@@ -79,6 +86,13 @@
 		0FDFA7BF2AA47893003EB10C /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = SOURCE_ROOT; };
 		0FDFA7C12AA4A72E003EB10C /* PriceFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormat.swift; sourceTree = SOURCE_ROOT; };
 		0FDFA7C32AA4AE7B003EB10C /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = SOURCE_ROOT; };
+		7886D3922B1EFA74005D7911 /* AcceptTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AcceptTripsView.swift; path = Views/AcceptTripsView.swift; sourceTree = SOURCE_ROOT; };
+		7886D3942B1F2933005D7911 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trips.swift; path = Views/Trips.swift; sourceTree = SOURCE_ROOT; };
+		789CEFE12B208C4A00F98831 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeoPoint.swift; path = Views/GeoPoint.swift; sourceTree = SOURCE_ROOT; };
+		78A94BE62B1DEEE700F2C956 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = SOURCE_ROOT; };
+		78A94BE82B1DF17A00F2C956 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = SOURCE_ROOT; };
+		78A94BEA2B1DF4C700F2C956 /* cartop.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cartop.svg; path = ../../cartop.svg; sourceTree = "<group>"; };
+		78A94BED2B1DFED400F2C956 /* userServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userServices.swift; sourceTree = "<group>"; };
 		ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
 		ED692ADA2A994D740081A5FE /* MenuActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActionButton.swift; sourceTree = "<group>"; };
 		ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
@@ -219,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				ED8D39302AA96E4000693A35 /* TripsView.swift */,
+				7886D3922B1EFA74005D7911 /* AcceptTripsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +276,14 @@
 			path = flexiableItem;
 			sourceTree = "<group>";
 		};
+		78A94BEC2B1DFEC100F2C956 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				78A94BED2B1DFED400F2C956 /* userServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EDB469742A8F951000C91A1D = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +307,7 @@
 		EDB4697F2A8F951000C91A1D /* uber */ = {
 			isa = PBXGroup;
 			children = (
+				78A94BEC2B1DFEC100F2C956 /* Services */,
 				0FC5C59A2AA60B2000C68BD9 /* GoogleService-Info.plist */,
 				0FC5C5972AA5EE9F00C68BD9 /* flexiableItem */,
 				EDB469BA2A8FCD3900C91A1D /* Info.plist */,
@@ -293,6 +317,7 @@
 				EDB469B12A8F95AF00C91A1D /* app */,
 				EDB469AC2A8F953800C91A1D /* core */,
 				EDB469842A8F951100C91A1D /* Assets.xcassets */,
+				78A94BEA2B1DF4C700F2C956 /* cartop.svg */,
 				EDB469862A8F951100C91A1D /* Preview Content */,
 			);
 			path = uber;
@@ -352,6 +377,8 @@
 				0FDFA7C32AA4AE7B003EB10C /* UberLocation.swift */,
 				ED8F4B5B2AA9995F000ED49E /* User.swift */,
 				EDE415322AB4F45000637226 /* SavedLocation.swift */,
+				78A94BE82B1DF17A00F2C956 /* DriverAnnotation.swift */,
+				7886D3942B1F2933005D7911 /* Trips.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -362,6 +389,8 @@
 				0FDFA7C12AA4A72E003EB10C /* PriceFormat.swift */,
 				0FC5C5832AA5B3E100C68BD9 /* Color.swift */,
 				EDE415362AB53F5900637226 /* DeveloperPreview.swift */,
+				78A94BE62B1DEEE700F2C956 /* UIImage.swift */,
+				789CEFE12B208C4A00F98831 /* GeoPoint.swift */,
 			);
 			path = extention;
 			sourceTree = "<group>";
@@ -495,7 +524,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EDB4697C2A8F951000C91A1D = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -539,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB469882A8F951100C91A1D /* Preview Assets.xcassets in Resources */,
+				78A94BEB2B1DF4C700F2C956 /* cartop.svg in Resources */,
 				EDB469852A8F951100C91A1D /* Assets.xcassets in Resources */,
 				0FC5C59B2AA60B2000C68BD9 /* GoogleService-Info.plist in Resources */,
 			);
@@ -567,8 +597,10 @@
 			files = (
 				ED692AE12A99824D0081A5FE /* LocationSearchViewModel.swift in Sources */,
 				EDE415392AB55D9600637226 /* HomeViewModel.swift in Sources */,
+				7886D3952B1F2933005D7911 /* Trips.swift in Sources */,
 				EDD14CF92AAC2FC2005FF42F /* SavedLocationRowView.swift in Sources */,
 				ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */,
+				78A94BE92B1DF17A00F2C956 /* DriverAnnotation.swift in Sources */,
 				ED69E94E2AB4020F003A2383 /* SavedLocationSearchView.swift in Sources */,
 				EDB469B92A8FB3B100C91A1D /* LocationManager.swift in Sources */,
 				EDD14CEA2AABF9DE005FF42F /* SideMenuOptionViewModel.swift in Sources */,
@@ -580,6 +612,7 @@
 				ED69E94C2AB3F79F003A2383 /* SavedLocationViewModel.swift in Sources */,
 				EDB469B62A8F965000C91A1D /* UberMapViewRepresantable.swift in Sources */,
 				EDD14CF62AAC2693005FF42F /* SettingsView.swift in Sources */,
+				78A94BEE2B1DFED400F2C956 /* userServices.swift in Sources */,
 				ED8F4B5C2AA9995F000ED49E /* User.swift in Sources */,
 				ED692ADB2A994D740081A5FE /* MenuActionButton.swift in Sources */,
 				EDE415332AB4F45000637226 /* SavedLocation.swift in Sources */,
@@ -588,14 +621,17 @@
 				EDD14CEF2AABFBED005FF42F /* SideMenuOptionView.swift in Sources */,
 				0FC5C5842AA5B3E100C68BD9 /* Color.swift in Sources */,
 				ED692ADF2A9958C80081A5FE /* LocationSearchResultCellView.swift in Sources */,
+				78A94BE72B1DEEE700F2C956 /* UIImage.swift in Sources */,
 				EDD14CFB2AAC36C4005FF42F /* SettingRowView.swift in Sources */,
 				0FDFA7C22AA4A72E003EB10C /* PriceFormat.swift in Sources */,
 				EDD14CE72AABEEDB005FF42F /* SideMenuView.swift in Sources */,
+				789CEFE22B208C4A00F98831 /* GeoPoint.swift in Sources */,
 				EDE415372AB53F5900637226 /* DeveloperPreview.swift in Sources */,
 				0FDFA7C42AA4AE7B003EB10C /* UberLocation.swift in Sources */,
 				0FC5C5992AA5EEC300C68BD9 /* CustomInputField.swift in Sources */,
 				ED692AD92A994A8C0081A5FE /* LocationSearchActivationView.swift in Sources */,
 				0FC5C58A2AA5C79700C68BD9 /* LoginView.swift in Sources */,
+				7886D3932B1EFA75005D7911 /* AcceptTripsView.swift in Sources */,
 				0FDFA7C02AA47893003EB10C /* RideType.swift in Sources */,
 				EDE415352AB4F77500637226 /* AppConstant.swift in Sources */,
 			);
@@ -638,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -670,6 +707,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -698,6 +736,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -730,6 +769,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

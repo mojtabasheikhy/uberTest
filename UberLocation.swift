@@ -7,8 +7,8 @@
 
 import CoreLocation
 
-struct UberLocation  {
-    
+struct UberLocation :Identifiable  {
+    let id = NSUUID().uuidString
     var  title : String
     var  coordiante : CLLocationCoordinate2D
 }
