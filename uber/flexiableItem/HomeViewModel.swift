@@ -148,7 +148,19 @@ extension HomeViewModel : MKLocalSearchCompleterDelegate{
     }
 }
 extension HomeViewModel {
-    
+    func addressFromPlaceMark(_ placeMark : CLPlacemark) ->String{
+        var result = ""
+        if let thoroughtfare = placeMark.thoroughfare {
+            result += thoroughtfare
+        }
+        if let subthoroughtfare = placeMark.subThoroughfare{
+            result += "\(subthoroughtfare)"
+        }
+        if let subAdministrativeArea = placeMark.subAdministrativeArea {
+            result += ", \(subAdministrativeArea)"
+        }
+        return result
+    }
     
     func fetchDriver(){
         Firestore.firestore().collection(AppConstant.UserCollection)
@@ -202,7 +214,7 @@ extension HomeViewModel {
                 dropoffLocationName: dropOffLocation.title,
                 pickUpLocation: self.currentUser!.coordiante,
                 dropOffLocation:dropOffGeoLocaitonGeo ,	
-                pickUpLocationAddress: "hi2", 
+                pickUpLocationAddress: self.addressFromPlaceMark(CLPlacemark),
                 tripsCost: tripCost)
             
                guard let encodeTrip = try? Firestore.Encoder().encode(trip) else { return }
