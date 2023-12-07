@@ -55,6 +55,8 @@ class HomeViewModel : NSObject, ObservableObject {
             self.currentUser = user!
             if user?.accountType == .passenger {
                 self.fetchDriver()
+                self.AddTripsObservableToPassenger()
+                
             }else {
             
                 self.fetchTrips()
@@ -148,6 +150,18 @@ extension HomeViewModel : MKLocalSearchCompleterDelegate{
     }
 }
 extension HomeViewModel {
+    func AddTripsObservableToPassenger(){
+        guard let currentUser = currentUser , currentUser.accountType == AccountType.passenger else { return }
+        Firestore.firestore().collection(AppConstant.tripsCollection).whereField(AppConstant.passengerId,isEqualTo: currentUser.uid)
+            .addSnapshotListener{snappshot , _ in
+                guard let change = snappshot?.documentChanges.first , change.type == .added || change.type == .modified else { return }
+                guard let trips = try? change.document.data(as : Trips.self) else { return }
+                self .trips = trips
+            }
+    }
+    
+    
+    
     func addressFromPlaceMark(_ placeMark : CLPlacemark) ->String{
         var result = ""
         if let thoroughtfare = placeMark.thoroughfare {
@@ -189,6 +203,20 @@ extension HomeViewModel {
                 
         }
     }
+    func acceptTrips(){
+        updateTrips(state: .accepted)
+    }
+  
+    func rejectTrips(){
+        updateTrips( state: .rejected)
+    }
+    func updateTrips(  state : tripsState){
+        guard let trips = self.trips else  {return}
+        Firestore.firestore()
+            .collection(AppConstant.tripsCollection)
+            .document(self.trips!.id)
+            .updateData([AppConstant.tripsStateCollection: state.rawValue])
+    }
 }
 
 extension HomeViewModel {
@@ -203,7 +231,7 @@ extension HomeViewModel {
             guard let CLPlacemark = CLPlacemark else {return}
             let tripCost = self.computePrice(type: .uberXl)
             let trip = Trips(
-                id: NSUUID().uuidString,
+               
                 passengerUid: self.currentUser!.uid,
                 driverUid: driver.uid,
                 passnegerName: self.currentUser!.fullName,
@@ -215,7 +243,9 @@ extension HomeViewModel {
                 pickUpLocation: self.currentUser!.coordiante,
                 dropOffLocation:dropOffGeoLocaitonGeo ,	
                 pickUpLocationAddress: self.addressFromPlaceMark(CLPlacemark),
-                tripsCost: tripCost)
+                tripsCost: tripCost,
+                tripState: .requested
+            )
             
                guard let encodeTrip = try? Firestore.Encoder().encode(trip) else { return }
                Firestore.firestore().collection(AppConstant.tripsCollection).document().setData(encodeTrip) {error in

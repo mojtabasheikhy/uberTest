@@ -10,6 +10,7 @@ import MapKit
 
 struct AcceptTripsView: View {
     @State var region : MKCoordinateRegion
+    @EnvironmentObject var homeViewModel : HomeViewModel
     let trips : Trips
     let annotionItem : UberLocation
     init(trip : Trips) {
@@ -106,7 +107,7 @@ struct AcceptTripsView: View {
                 .padding(.horizontal)
             HStack{
                 Button(action: {
-                    
+                    homeViewModel.rejectTrips()
                 }, label: {
                     Text("Reject")
                         .foregroundColor(.white)
@@ -118,7 +119,7 @@ struct AcceptTripsView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    homeViewModel.acceptTrips()
                 }, label: {
                     Text("Accept")  
                         .foregroundColor(.white)

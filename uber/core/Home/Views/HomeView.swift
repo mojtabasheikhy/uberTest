@@ -63,13 +63,27 @@ extension HomeView {
                     .padding(.top , 10)
                 
             }
-            if mapViewState == .locationSelected  || mapViewState == .PolyLineAdded {
-                TripsView().transition(.move(edge: .bottom))
+            if let user = authViewModel.currentUser{
+                if user.accountType == .passenger{
+                    if mapViewState == .locationSelected  || mapViewState == .PolyLineAdded {
+                        TripsView().transition(.move(edge: .bottom))
+                    }else if mapViewState == .TripsRejected {
+                        //show reject view
+                    }else if mapViewState == .TripsAccepted{
+                        //show accepts view
+                    }
+                    else if mapViewState == .TripsRequested{
+                        //show loading view
+                    }
+                }else {
+                    if let trip = homeViewModel.trips{
+                         AcceptTripsView(trip: trip)
+                            .transition(.move(edge: .bottom))
+                    }
+                }
             }
-            if let trip = homeViewModel.trips{
-                 AcceptTripsView(trip: trip)
-                    .transition(.move(edge: .bottom))
-            }
+            
+            
         }
         .onReceive(LocationManager.shared.$userLocation) { locationManager in
             if locationManager != nil{
@@ -80,6 +94,24 @@ extension HomeView {
                 mapViewState = .locationSelected
             }
         
+        }.onReceive(homeViewModel.$trips ){ trip in
+            guard let trip = trip else { return }
+            switch trip.tripState {
+            case .rejected : 
+                mapViewState = .TripsRejected
+                
+                break
+                
+            case .accepted :
+                mapViewState = .TripsAccepted
+                break
+            
+            case .requested :
+                mapViewState = .TripsRequested
+                break
+                
+            }
+            
         }
     }
 }

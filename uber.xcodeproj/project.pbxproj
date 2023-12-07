@@ -27,6 +27,8 @@
 		78A94BE92B1DF17A00F2C956 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A94BE82B1DF17A00F2C956 /* DriverAnnotation.swift */; };
 		78A94BEB2B1DF4C700F2C956 /* cartop.svg in Resources */ = {isa = PBXBuildFile; fileRef = 78A94BEA2B1DF4C700F2C956 /* cartop.svg */; };
 		78A94BEE2B1DFED400F2C956 /* userServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A94BED2B1DFED400F2C956 /* userServices.swift */; };
+		78BA58622B21FEE200E3FCA3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA58612B21FEE200E3FCA3 /* LottieView.swift */; };
+		78BA58642B21FF2E00E3FCA3 /* requesttrip.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BA58632B21FF2E00E3FCA3 /* requesttrip.json */; };
 		ED692AD92A994A8C0081A5FE /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */; };
 		ED692ADB2A994D740081A5FE /* MenuActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADA2A994D740081A5FE /* MenuActionButton.swift */; };
 		ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */; };
@@ -93,6 +95,8 @@
 		78A94BE82B1DF17A00F2C956 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = SOURCE_ROOT; };
 		78A94BEA2B1DF4C700F2C956 /* cartop.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cartop.svg; path = ../../cartop.svg; sourceTree = "<group>"; };
 		78A94BED2B1DFED400F2C956 /* userServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userServices.swift; sourceTree = "<group>"; };
+		78BA58612B21FEE200E3FCA3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		78BA58632B21FF2E00E3FCA3 /* requesttrip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = requesttrip.json; path = ../../../Downloads/requesttrip.json; sourceTree = "<group>"; };
 		ED692AD82A994A8C0081A5FE /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
 		ED692ADA2A994D740081A5FE /* MenuActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActionButton.swift; sourceTree = "<group>"; };
 		ED692ADC2A9950F00081A5FE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
@@ -284,6 +288,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		78BA58602B21FECB00E3FCA3 /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				78BA58612B21FEE200E3FCA3 /* LottieView.swift */,
+			);
+			path = customView;
+			sourceTree = "<group>";
+		};
 		EDB469742A8F951000C91A1D = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +319,8 @@
 		EDB4697F2A8F951000C91A1D /* uber */ = {
 			isa = PBXGroup;
 			children = (
+				78BA58632B21FF2E00E3FCA3 /* requesttrip.json */,
+				78BA58602B21FECB00E3FCA3 /* customView */,
 				78A94BEC2B1DFEC100F2C956 /* Services */,
 				0FC5C59A2AA60B2000C68BD9 /* GoogleService-Info.plist */,
 				0FC5C5972AA5EE9F00C68BD9 /* flexiableItem */,
@@ -550,6 +564,7 @@
 			mainGroup = EDB469742A8F951000C91A1D;
 			packageReferences = (
 				0FC5C59C2AA6119000C68BD9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				78BA585F2B21FEB000E3FCA3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = EDB4697E2A8F951000C91A1D /* Products */;
 			projectDirPath = "";
@@ -567,6 +582,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BA58642B21FF2E00E3FCA3 /* requesttrip.json in Resources */,
 				EDB469882A8F951100C91A1D /* Preview Assets.xcassets in Resources */,
 				78A94BEB2B1DF4C700F2C956 /* cartop.svg in Resources */,
 				EDB469852A8F951100C91A1D /* Assets.xcassets in Resources */,
@@ -602,6 +618,7 @@
 				ED692ADD2A9950F00081A5FE /* LocationSearchView.swift in Sources */,
 				78A94BE92B1DF17A00F2C956 /* DriverAnnotation.swift in Sources */,
 				ED69E94E2AB4020F003A2383 /* SavedLocationSearchView.swift in Sources */,
+				78BA58622B21FEE200E3FCA3 /* LottieView.swift in Sources */,
 				EDB469B92A8FB3B100C91A1D /* LocationManager.swift in Sources */,
 				EDD14CEA2AABF9DE005FF42F /* SideMenuOptionViewModel.swift in Sources */,
 				0F07C5AC2AA336FB00BF88FC /* MapViewState.swift in Sources */,
@@ -974,6 +991,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.18.0;
+			};
+		};
+		78BA585F2B21FEB000E3FCA3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
